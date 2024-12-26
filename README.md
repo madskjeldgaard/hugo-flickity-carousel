@@ -16,19 +16,17 @@ git submodule add git@github.com:madskjeldgaard/hugo-flickity-carousel.git theme
 
 Then add it your list of themes:
 
-Note: It has to be the last component, after your main theme.
-
 ```toml
 theme  = [ "exformal-hugo-theme", "hugo-flickity-carousel"]
 ```  
-
-The theme component **expects you to have jquery installed**.
 
 ## Usage
 
 ### Shortcode
 
-You can insert an image carousel using the following shortcode. This expects the images to be in the `static` folder of your website:
+You can insert an image carousel using the following shortcode. This expects the images to be in the `static` folder of your website.
+
+The syntax is really ugly because it's json where each double quote has to be escaped.
 
 ```
 {{< image-carousel images="[{ \"src\": \"/DSCF8028.jpg\", \"alt\": \"Image 1\" }, { \"src\": \"/DSCF8032.jpg\", \"alt\": \"Image 2\\" }, { \"src\": \"/DSCF8033.jpg\", \"alt\": \"Image 2\\" }]" >}}
