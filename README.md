@@ -31,3 +31,13 @@ The syntax is really ugly because it's json where each double quote has to be es
 ```
 {{< image-carousel images="[{ \"src\": \"/DSCF8028.jpg\", \"alt\": \"Image 1\" }, { \"src\": \"/DSCF8032.jpg\", \"alt\": \"Image 2\\" }, { \"src\": \"/DSCF8033.jpg\", \"alt\": \"Image 2\\" }]" >}}
 ```
+
+### Partial
+
+If you want to use the image carousel partial directly in your templates, you can do so by adding the following:
+
+```hugo
+{{ partial "image-carousel.html" (dict "images" "[{ \"src\": \"/DSCF8028.jpg\", \"alt\": \"Image 1\" }, { \"src\": \"/DSCF8032.jpg\", \"alt\": \"Image 2\\" }, { \"src\": \"/DSCF8033.jpg\", \"alt\": \"Image 2\\" }]") }}
+```
+
+The `images` parameter should be a path to a JSON file containing an array of image objects with `src` and `alt` properties.
